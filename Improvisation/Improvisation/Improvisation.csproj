@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E19D780-4A3F-44DC-AFE1-39A47E04118C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Improvisation</RootNamespace>
+    <AssemblyName>Improvisation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\packages\Accord.2.12.0.0\lib\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning">
+      <HintPath>..\packages\Accord.MachineLearning.2.12.0.0\lib\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\packages\Accord.Math.2.12.0.0\lib\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\packages\Accord.Statistics.2.12.0.0\lib\Accord.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Genetic">
+      <HintPath>..\packages\AForge.Genetic.2.2.5\lib\AForge.Genetic.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Neuro">
+      <HintPath>..\packages\AForge.Neuro.2.2.5\lib\AForge.Neuro.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphX.Common">
+      <HintPath>..\packages\GraphX.2.0.2\lib\net40\GraphX.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphX.Controls">
+      <HintPath>..\packages\GraphX.2.0.2\lib\net40\GraphX.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphX.Logic">
+      <HintPath>..\packages\GraphX.2.0.2\lib\net40\GraphX.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.3.0.2\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QuickGraph">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Data">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Graphviz.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Serialization">
+      <HintPath>..\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Collections">
+      <HintPath>..\packages\Sanford.MidiToolkit.5.0.2\lib\net40\Sanford.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia">
+      <HintPath>..\packages\Sanford.MidiToolkit.5.0.2\lib\net40\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Midi">
+      <HintPath>..\packages\Sanford.MidiToolkit.5.0.2\lib\net40\Sanford.Multimedia.Midi.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Timers">
+      <HintPath>..\packages\Sanford.MidiToolkit.5.0.2\lib\net40\Sanford.Multimedia.Timers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Threading">
+      <HintPath>..\packages\Sanford.MidiToolkit.5.0.2\lib\net40\Sanford.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="YAXLib">
+      <HintPath>..\packages\YAXLib.2.13\lib\YAXLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FinalUI\FinalUIBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalUI\FinalUIBase.Designer.cs">
+      <DependentUpon>FinalUIBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalUI\FinalUICreateNN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalUI\FinalUICreateNN.Designer.cs">
+      <DependentUpon>FinalUICreateNN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalUI\FInalUICreateStatModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalUI\FInalUICreateStatModel.Designer.cs">
+      <DependentUpon>FInalUICreateStatModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalUI\FinalUIHelperMethods.cs" />
+    <Compile Include="FinalUI\TemperaryVariables.cs" />
+    <Compile Include="Library\AForgeExtensions\ActivationFunctions.cs" />
+    <Compile Include="Library\AForgeExtensions\GammaFunction.cs" />
+    <Compile Include="Library\Clustering\KMeans.cs" />
+    <Compile Include="Library\CycleFinder.cs" />
+    <Compile Include="Library\Distance\EuclideanDistance.cs" />
+    <Compile Include="Library\Distance\GaussianNoiseDistance.cs" />
+    <Compile Include="Library\Distance\HammingDistance.cs" />
+    <Compile Include="Library\Distance\IDistance.cs" />
+    <Compile Include="Library\Distance\LevenshteinDistance.cs" />
+    <Compile Include="Library\GraphOperations\NGramGraphDistanceType.cs" />
+    <Compile Include="Library\GraphOperations\NGramSemanticGraphDistance.cs" />
+    <Compile Include="Library\MusicViaMelody\DiscreteMelodyExtractor.cs" />
+    <Compile Include="Library\MusicViaMelody\IMelodyTransformRule.cs" />
+    <Compile Include="Library\MusicViaMelody\Melody.cs" />
+    <Compile Include="Library\MusicViaMelody\MusicalTransforms\BaseNoteToChord.cs" />
+    <Compile Include="Library\MusicViaMelody\MusicalTransforms\OctaveNoteToChord.cs" />
+    <Compile Include="Library\MusicViaMelody\MusicalTransforms\SimpleNoteTransforms.cs" />
+    <Compile Include="Library\Music\AsyncOutputPlayer.cs" />
+    <Compile Include="Library\Music\Chord.cs" />
+    <Compile Include="Library\Music\ChordLevenshteinDistance.cs" />
+    <Compile Include="Library\Music\IDynamicHash.cs" />
+    <Compile Include="Library\Music\Learning\ChordChainGeneticFunction.cs" />
+    <Compile Include="Library\Music\Learning\DiscreteDataRetriever.cs" />
+    <Compile Include="Library\Music\Learning\DiscreteNeuralNetworkByChord.cs" />
+    <Compile Include="Library\Music\LilyPondBuilder.cs" />
+    <Compile Include="Library\Search\GeneticSearch.cs" />
+    <Compile Include="Library\Search\GeneticSettings.cs" />
+    <Compile Include="Library\Search\IGeneticFunctions.cs" />
+    <Compile Include="Library\SmartWalkers\IRandomNGramGraphWalker.cs" />
+    <Compile Include="Library\SmartWalkers\INGramMarkovWeightAssigner.cs" />
+    <Compile Include="Library\SmartWalkers\NGramIDWeightAssigner.cs" />
+    <Compile Include="Library\SmartWalkers\NGramLinearSizeDistrubutionAssigner.cs" />
+    <Compile Include="Library\SmartWalkers\NGramBaseRandomGraphWalker.cs" />
+    <Compile Include="Library\SmartWalkers\NGramLinearSizeVsTimeWeightAssigner.cs" />
+    <Compile Include="Library\SmartWalkers\NGramMetaWeightAssigner.cs" />
+    <Compile Include="Library\SmartWalkers\NGramGraphChainRetriever.cs" />
+    <Compile Include="UI\BaseGraphUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseGraphUI.Designer.cs">
+      <DependentUpon>BaseGraphUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\GraphUIHelper.cs" />
+    <Compile Include="Library\Music\BaseNoteRetriever.cs" />
+    <Compile Include="Library\Music\SimplisticPianoNote.cs" />
+    <Compile Include="Library\Music\InstrumentChannelMessengerProducer.cs" />
+    <Compile Include="Library\Music\MIDIExtensions.cs" />
+    <Compile Include="Library\Music\OutputConstants.cs" />
+    <Compile Include="Library\Music\PianoNoteRetriever.cs" />
+    <Compile Include="UI\MoreComplexNoteGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NoteGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library\BasicExtensions.cs" />
+    <Compile Include="Library\Data\MusicCorpus.cs" />
+    <Compile Include="Library\Data\TextCorpus.cs" />
+    <Compile Include="Library\HashHelper.cs" />
+    <Compile Include="Library\NGraming\NGram.cs" />
+    <Compile Include="Library\NGraming\NGramDistribution.cs" />
+    <Compile Include="Library\NGraming\NGramGraphMarkovChain.cs" />
+    <Compile Include="Library\NGraming\NGramHelper.cs" />
+    <Compile Include="Library\NGraming\NGramMarkovChain.cs" />
+    <Compile Include="Library\NGraming\NGramRandomGraphMarkovChainWalker.cs" />
+    <Compile Include="Models\DataEdge.cs" />
+    <Compile Include="Models\DataVertex.cs" />
+    <Compile Include="Models\GraphAreaExample.cs" />
+    <Compile Include="Models\GraphExample.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\WordGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="FinalUI\FinalUIBase.resx">
+      <DependentUpon>FinalUIBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalUI\FinalUICreateNN.resx">
+      <DependentUpon>FinalUICreateNN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalUI\FInalUICreateStatModel.resx">
+      <DependentUpon>FInalUICreateStatModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NoteGraph.resx">
+      <DependentUpon>NoteGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Templates\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Templates\template.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\dice.png" />
+    <Content Include="Images\update.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
