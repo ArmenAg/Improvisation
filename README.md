@@ -1,7 +1,7 @@
 Automating Music Composition and Melody Generation.
 ==================================================
 
-Many believe that the epitome of human creativity is the ability to create art irregardless of the art form itself. One of the more popular art forms, music, has been viewed as an intellectual exercise and composers such as Bach and Chopin are viewed as geniuses in our modern world. The inherent question to ask was, could software even begin to mimic the creativity of these composers and their compositions. 
+Many believe that the epitome of human creativity is the ability to create art regardless of the art form itself. One of the more popular art forms, music, has been viewed as an intellectual exercise and composers such as Bach and Chopin are viewed as geniuses in our modern world. The inherent question to ask was, could software even begin to mimic the creativity of these composers and their compositions. 
 
 This project succesfully answers that question.
 
