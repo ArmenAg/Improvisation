@@ -19,8 +19,8 @@ How to use the Test Application
 2. Open the .sln file in visual studio.
 3. Press Ctrl+F5 to launch the sample UI.
 4. First we need to teach our program what is good music and what is bad. To do so, press on Create Neural Net.
-5. Give it "good music" samples by pressing Load Good Midi Files.
-6. Give it "bad music" samples by pressing Load Okay Midi Files.
+5. Give it "good music" samples by pressing Load Good Midi Files and selecting desired midi files. I have included a folder with different types of music. You can, for example, select all eminem files to be represented as good.
+6. Give it "bad music" samples by pressing Load Okay Midi Files. In the folder included, you could, for example, select ella fitzgerald files as bad.
 7. If your music has a lot chords (such as in classical music), chord recognition will run for a long time,to decrease time allow the chord recognition to run note by note by checking the "Note by Note" checkbox. 
 8. Press Begin training.
 9. If wanted, save the file.
