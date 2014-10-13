@@ -18,8 +18,11 @@ namespace Improvisation.Library.MusicViaMelody.MusicalTransforms
 
         public override Chord Transform(Chord baseMelody)
         {
-            Debug.Assert(baseMelody.Notes.Count != 1);
+            throw new NotImplementedException();
         }
-        private Tuple<ChannelMessage,ChannelMessage> OnAndOff
+        private Tuple<ChannelMessage, ChannelMessage> OnAndOff()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
