@@ -9,7 +9,7 @@ Although the majority of this project is based on Music generation, the code is 
 
 Email any questions to armen.ag@live.com
 
-You can find the respective paper written at http://1drv.ms/1shYZTb
+You can find the respective paper written at the root directory.
 
 Thank you for reading.
 
