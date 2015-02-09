@@ -79,7 +79,7 @@ namespace Improvisation.FinalUI
             PianoNoteRetriever retriever = new PianoNoteRetriever();
             var midiEvents = new InstrumentMidiEventProducer(this.files.Select(x => new Sequence(x)));
             var midi = midiEvents.GetOrderedMessages(GeneralMidiInstrument.AcousticGrandPiano);
-            Chord.AllowForComplexSimplification = this.checkBox.Checked;
+            Chord.AllowForComplexSimplification = this.chkNoteByNote.Checked;
             var accords = Chord.RetrieveChords(midi, retriever);
 
             DiscreteDataRetriever data = new DiscreteDataRetriever(accords.ToList());
@@ -90,7 +90,7 @@ namespace Improvisation.FinalUI
             {
                 var midiEvents1 = new InstrumentMidiEventProducer(this.okayFiles.Select(x => new Sequence(x)));
                 var midi1 = midiEvents1.GetOrderedMessages(GeneralMidiInstrument.AcousticGrandPiano);
-                Chord.AllowForComplexSimplification = this.checkBox.Checked;
+                Chord.AllowForComplexSimplification = this.chkNoteByNote.Checked;
                 var accords1 = Chord.RetrieveChords(midi1, retriever);
                 DiscreteDataRetriever data1 = new DiscreteDataRetriever(accords1.ToList());
 
@@ -107,6 +107,11 @@ namespace Improvisation.FinalUI
                 item.Enabled = false;
             }
             threadTrain = new Thread(Start);
+            if (chkRealtime.Checked)
+            {
+                threadTrain.Priority = ThreadPriority.Highest;
+                System.Diagnostics.Process.GetCurrentProcess().PriorityClass = System.Diagnostics.ProcessPriorityClass.RealTime;
+            }
             threadTrain.Start();
         }
 
@@ -147,5 +152,13 @@ namespace Improvisation.FinalUI
         }
 
         private Thread threadTrain;
+
+        private void realtimeWarning(object sender, EventArgs e)
+        {
+            if (chkRealtime.Checked)
+            {
+                MessageBox.Show("Setting the NN Generator to high priority may cause some systems to crash. Only use this option on powerful systems!");
+            }
+        }
     }
 }
