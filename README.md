@@ -1,13 +1,13 @@
 Automating Music Composition and Melody Generation.
 ==================================================
 
-Many believe that the epitome of human creativity is the ability to create art regardless of the art form itself. One of the more popular art forms, music, has been viewed as an intellectual exercise and composers such as Bach and Chopin are viewed as geniuses in our modern world. The inherent question to ask was, could software even begin to mimic the creativity of these composers and their compositions. 
+Many believe that the quintessence of human creativity is the aptitude to create art regardless of the art form itself. One of the more popular art forms, music,which has been viewed as an intellectual workout and composers such as Bach and Chopin are viewed as geniuses in our modern world. The intrinsic question to ask was, could software even begin to mimic the creativity of these composers and their compositions. 
 
 This project succesfully answers that question.
 
 Although the majority of this project is based on Music generation, the code is completly generic and can be applied to other fields such as auto generation of papers. 
 
-Email any questions to armen.ag@live.com
+For any questions or query email me at armen.ag@live.com
 
 You can find the respective paper written at the root directory.
 
@@ -28,6 +28,6 @@ How to use the Test Application
 11. Load up your musical samples and change the range of the size of the NGrams by shifting the two numbers at the bottom.
 12. Again if your music is complicated, check the "Note by Note" checkbox.
 13. Now everything is ready. Shift the variables to your liking and press "Start Music Generation".
-14. Once the search is done you can play the various melodies by pressing on the items listed in the listbox on the right. General rule is higher on the listbox = higher rated by neural network.
+14. Once the search is done you can play the various melodies by pressing on the items listed in the Listbox on the right. The general rule is higher on the Listbox = higher rated by a neural network.
 
 Have Fun :)
